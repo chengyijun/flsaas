@@ -4,7 +4,7 @@
       <el-aside width="200px" @click.native="menuSelect">
         <img src="./assets/images/组 1.png" alt="" />
         <el-menu :default-openeds="['1', '3']">
-          <el-menu-item index="1" uri="/">首页</el-menu-item>
+          <el-menu-item index="1" uri="/home_page">首页</el-menu-item>
           <el-menu-item index="1" uri="/appointment">预约管理</el-menu-item>
           <el-menu-item index="1" uri="/patient_manage">患者管理</el-menu-item>
           <el-menu-item index="1" uri="/iot">物联网</el-menu-item>
@@ -163,11 +163,7 @@ body,
 </style>
 
 <script>
-import PatientManage from "/src/pages/PatientMange";
 export default {
-  components: {
-    PatientManage,
-  },
   methods: {
     menuSelect(e) {
       if (e.target.tagName == "ASIDE") {
@@ -179,7 +175,9 @@ export default {
       }
       e.target.className = "el-menu-item is-selected";
       // this.$router.push("/other");
-      this.$router.push(e.target.getAttribute("uri"));
+      if (this.$route.path !== e.target.getAttribute("uri")) {
+        this.$router.push(e.target.getAttribute("uri"));
+      }
     },
   },
 };

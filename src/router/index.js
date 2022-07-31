@@ -5,11 +5,11 @@ import VueRouter from "vue-router";
 Vue.use(VueRouter);
 
 const routes = [
-  {
-    // 配置默认路由
-    path: "", // 路由地址
-    redirect: "/patient_manage", // 重定向
-  },
+  // {
+  //   // 配置默认路由
+  //   path: "", // 路由地址
+  //   redirect: "/patient_manage", // 重定向
+  // },
 
   {
     path: "/home_page",
@@ -32,7 +32,7 @@ const routes = [
     name: "PatinentManage",
     component: () =>
       import(
-        /* webpackChunkName: "PatientMange" */ "../pages/PatientMange.vue"
+        /* webpackChunkName: "PatientManage" */ "../pages/PatientManage.vue"
       ),
   },
   {

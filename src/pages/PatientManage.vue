@@ -149,13 +149,15 @@
 }
 
 .el-tabs__item {
-  font-size: 30px;
+  font-size: 14px;
   font-family: Microsoft YaHei-Bold, Microsoft YaHei;
   font-weight: bold;
-  color: #1664dc;
+
+  color: #696969;
 }
 
 .el-tabs__nav .is-active {
+  color: #1664dc;
   font-size: 16px;
   font-weight: bold;
 }
