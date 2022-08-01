@@ -10,7 +10,7 @@ const routes = [
     {
         // 配置默认路由
         path: "", // 路由地址
-        redirect: "/patient_manage", // 重定向
+        redirect: "/home_page", // 重定向
     },
 
     {
@@ -35,7 +35,7 @@ const routes = [
         component: () =>
             import(
                 /* webpackChunkName: "PatientManage" */ "../pages/PatientManage.vue"
-                ),
+            ),
         children: [
             {
                 path: "",
@@ -128,7 +128,7 @@ const routes = [
         component: () =>
             import(
                 /* webpackChunkName: "OperationLog" */ "../pages/OperationLog.vue"
-                ),
+            ),
     },
 ];
 
